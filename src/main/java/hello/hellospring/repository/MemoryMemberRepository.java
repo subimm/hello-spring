@@ -1,8 +1,10 @@
 package hello.hellospring.repository;
 
 import hello.hellospring.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
+
 
 public class MemoryMemberRepository implements MemberRepository{
 
@@ -14,7 +16,6 @@ public class MemoryMemberRepository implements MemberRepository{
         member.setId(++sequence);
         store.put(member.getId(), member);
         return member;
-
     }
 
     @Override
